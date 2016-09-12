@@ -1,0 +1,9 @@
+<div>
+	<p>
+		<span class="title_name"><%=link_to restaurant.title, restaurant_path(restaurant) %></span>
+		<span class="title_email">( <%= restaurant.description %> )</span>
+		<%= link_to content_tag('span','', class:'glyphicon glyphicon-pencil'), edit_restaurant_path(restaurant), class:'action' %>
+		<%= link_to content_tag('span','', class:'glyphicon glyphicon-trash'), restaurant, method: :delete,data: { confirm: 'You really notice to remove the entry?' }, class: 'action' %>
+		
+	</p>
+</div>
