@@ -1,0 +1,8 @@
+<div class="col-md-12">
+	<h1>Dishs</h1>
+
+	<% @dishes.each do |dish| %>
+		<%= render partial: 'dish', object: dish %>
+	<% end %>
+	
+</div>

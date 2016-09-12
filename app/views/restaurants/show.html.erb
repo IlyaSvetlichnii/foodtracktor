@@ -1,0 +1,10 @@
+<h1><%= @restaurant.title %></h1>
+<p><%= @restaurant.description %></p>
+<!-- <%= image_tag "/pictures/#{@restaurant.id}", height: '200' %> -->
+
+<% @restaurant.products.each do |product| %>
+		<div class="col-md-3">
+			<p><%= link_to product.title, restaurants_path(product) %></p>
+			<p><%= product.price %> $</p>
+		</div>
+<% end %>
