@@ -3,5 +3,14 @@
 		<span><%=link_to product.title, product_path(product) %></span>
 		<span>( <%= product.description %> )</span>
 		<span><%= product.price %></span>
+		<%= link_to "add", products_add_path(product) %>
+		<div class="form-actions">
+  		</div>
 	</p>
 </div>
+
+		<%= form_for :basket, url: baskets_path, method: :post do |ff| %>
+			<%= ff.text_field :count %>
+			<%= ff.hidden_field :product_id, value: product.id %>	
+	    <%= ff.button :submit %>
+		<% end %>

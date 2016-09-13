@@ -20,6 +20,7 @@ group :development do
   gem 'spring'
 end
 
+gem 'acts_as_shopping_cart', '~> 0.2.1'
 gem "paperclip"
 gem 'bootstrap-sass'
 gem 'devise'

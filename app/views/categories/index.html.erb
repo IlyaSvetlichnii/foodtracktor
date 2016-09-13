@@ -1,0 +1,10 @@
+<div class="col-md-12">
+	<h1>Categories</h1>
+
+	<%= link_to 'New', new_category_path %>
+
+	<% @categories.each do |category| %>
+		<%= render partial: 'category', object: category %>
+	<% end %>
+
+</div>
